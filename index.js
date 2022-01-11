@@ -1,5 +1,7 @@
 import Queue from "./data_structures/queues/queues_es6.js";
 import QueueD from "./data_structures/queues/queues_decorator.js";
+import sharedQueue from "./data_structures/queues/queues_funcShared.js"
+
 import Stack from "./data_structures/stacks/stacks_es6.js";
 import StackD from "./data_structures/stacks/stacks_decorator.js";
 import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
@@ -71,4 +73,4 @@ cars.enqueue("Cherokee")
 
 console.log(cars)
 console.log(cars.dequeue())
-console.log(cars)
+console.log(cars.size())
