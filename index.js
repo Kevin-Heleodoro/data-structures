@@ -1,4 +1,5 @@
 import Queue from "./data_structures/queues/queues_es6.js";
+import QueueD from "./data_structures/queues/queues_decorator.js";
 import Stack from "./data_structures/stacks/stacks_es6.js";
 import StackD from "./data_structures/stacks/stacks_decorator.js";
 import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
@@ -44,14 +45,30 @@ import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 // QUEUES
 
 // ES 6
-const cars = new Queue();
+// // const cars = new Queue()
 
 // cars.enqueue("Jetta")
 // cars.enqueue("Civic")
 // cars.enqueue("Cherokee")
+// // cars.dequeue();
+// // cars.size();
+// // cars.isEmpty();
+
+// console.log(cars)
+// console.log(cars.dequeue())
+// console.log(cars)
+// console.log(cars.peek())
+
+// Functional 
+const cars = QueueD()
+
+cars.enqueue("Jetta")
+cars.enqueue("Civic")
+cars.enqueue("Cherokee")
 // cars.dequeue();
 // cars.size();
 // cars.isEmpty();
 
-// console.log(cars.size())
-// console.log(cars)
+console.log(cars)
+console.log(cars.dequeue())
+console.log(cars)

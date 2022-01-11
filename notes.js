@@ -22,9 +22,18 @@
 // console.log(rose.c) // Will refer to gold 
 // console.log(gold)
 
-const gold = {
-    a: 'Gold Prop'
+const Car = function(loc){
+    const obj = Object.create(Car.prototype)
+    obj.loc = loc
+    return obj
 }
 
-const blue = Object.create(gold)
+Car.prototype = {
+    move: function(){this.loc++}
+}
 
+const vw = Car(1)
+vw.move()
+console.log(vw.constructor)
+console.log(Car.prototype.constructor)
+console.log(vw instanceof Car)

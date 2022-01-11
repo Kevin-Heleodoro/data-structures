@@ -27,10 +27,12 @@
 //     }
 // }
 
+// Using an object
 export default class Queue {
     constructor(){
         this.items = 0;
         this.queue = {}
+        this.head = 0;
     }
 
     enqueue(e){
@@ -39,7 +41,14 @@ export default class Queue {
     }
 
     dequeue(){
-        return this.queue[this.items--]
+        if(this.size() === 0) {return null}
+
+        let first = this.queue[this.head]
+        delete this.queue[this.head]
+        this.head++
+        this.items--
+
+        return first
     }
 
     size(){
