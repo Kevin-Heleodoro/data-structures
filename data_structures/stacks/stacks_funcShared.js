@@ -1,10 +1,10 @@
 // Functional Instatiation with shared methods
 
+// Using object without Object.assign -> This is not the way to do it, but it works for this scenario
 // const Stack = function(){
 //     let newStack = {};
 //     let items = 0;
 //     let stack = {};
-//     // extends(newStack, Stack.methods)
 // }
 
 // Stack.size = function(){
@@ -24,33 +24,57 @@
 //     return last
 // }
 
+// Using object
+// const Stack = function(){
+//     const newStack = {}
+
+//     newStack.stack = {}
+//     newStack.items = 0
+//     Object.assign(newStack, Stack.methods)
+
+//     return newStack;
+// }
+
+// Stack.methods = {};
+
+// Stack.methods.push = function(val){
+//     this.stack[this.items++] = val;
+// }
+
+// Stack.methods.pop = function(){
+//     if(this.size() === 0) {return null}
+
+//     let last = this.stack[this.items - 1]
+//     delete this.stack[this.items--]
+
+//     return last
+// }
+
+// Stack.methods.size = function(){
+//     return this.items;
+// }
+
+// Direct assignment using the 'this' keyword
 const Stack = function(){
-    const newStack = {}
-
-    newStack.stack = {}
+    let newStack = {};
     newStack.items = 0
-    Object.assign(newStack, Stack.methods)
-
-    return newStack;
+    newStack.stack = {}
 }
 
-Stack.methods = {};
+Stack.size = function(){
+    return this.items;
+}
 
-Stack.methods.push = function(val){
+Stack.push = function(val){
     this.stack[this.items++] = val;
 }
 
-Stack.methods.pop = function(){
-    if(this.size() === 0) {return null}
+Stack.pop = function() {
+    if(this.size() === 0){return null}
 
-    let last = this.stack[this.items - 1]
-    delete this.stack[this.items--]
-
+    let last = this.stack[this.items-1];
+    delete this.stack[this.items-1]
     return last
-}
-
-Stack.methods.size = function(){
-    return this.items;
 }
 
 

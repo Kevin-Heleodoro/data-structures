@@ -19,23 +19,32 @@ import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 // console.log(plates)
 
 // Decorator
-const plates = StackD();
+// const plates = StackD();
+// const cups = StackD();
 
-plates.push('A')
-plates.push('B')
-plates.push('C')
-plates.pop()
+// plates.push('A')
+// plates.push('B')
+// plates.push('C')
+// // plates.pop()
 
-console.log(plates.size())
-console.log(plates.pop())
-console.log(plates.size())
-console.log(plates)
+// cups.push('1')
+// cups.push('2')
+// cups.push('3')
+
+// console.log(plates.size())
+// console.log(plates.pop())
+// console.log(plates.size())
+
+// console.log(cups.size())
+// console.log(cups.pop())
+// console.log(cups.size())
+// console.log(plates)
 
 
 // QUEUES
 
 // ES 6
-// const cars = new Queue();
+const cars = new Queue();
 
 // cars.enqueue("Jetta")
 // cars.enqueue("Civic")
@@ -44,4 +53,5 @@ console.log(plates)
 // cars.size();
 // cars.isEmpty();
 
-// // console.log(cars)
+// console.log(cars.size())
+// console.log(cars)
