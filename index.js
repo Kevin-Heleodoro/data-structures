@@ -1,5 +1,5 @@
-import Queue from "./data_structures/queues.js";
-import Stack from "./data_structures/stacks.js";
+import Queue from "./data_structures/queues/queues_es6.js";
+import Stack from "./data_structures/stacks/stacks_es6.js";
 
 const cars = new Queue();
 
@@ -20,4 +20,4 @@ plates.push("Piece of Paper Towel")
 plates.size();
 plates.pop();
 
-console.log(plates)
+// console.log(plates)

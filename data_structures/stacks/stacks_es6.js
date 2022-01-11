@@ -1,3 +1,4 @@
+// ES6 instantiation
 export default class Stack {
     constructor(){
         this.items = [];
