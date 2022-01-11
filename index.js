@@ -1,10 +1,12 @@
 import Queue from "./data_structures/queues/queues_es6.js";
 import QueueD from "./data_structures/queues/queues_decorator.js";
-import sharedQueue from "./data_structures/queues/queues_funcShared.js"
+import sharedQueue from "./data_structures/queues/queues_funcShared.js";
+import QueueProto from "./data_structures/queues/queues_prototype.js";
 
 import Stack from "./data_structures/stacks/stacks_es6.js";
 import StackD from "./data_structures/stacks/stacks_decorator.js";
 import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
+import StackProto from "./data_structures/stacks/stacks_prototype.js";
 
 // STACKS
 
@@ -43,6 +45,15 @@ import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 // console.log(cups.size())
 // console.log(plates)
 
+// Prototypes
+// const plates = StackProto();
+// console.log(plates.size())
+// plates.push('a')
+// plates.push('b')
+// console.log(plates)
+// console.log(plates.pop())
+// console.log(plates)
+
 
 // QUEUES
 
@@ -62,15 +73,25 @@ import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 // console.log(cars.peek())
 
 // Functional 
-const cars = sharedQueue()
+// const cars = sharedQueue()
 
-cars.enqueue("Jetta")
-cars.enqueue("Civic")
-cars.enqueue("Cherokee")
-// cars.dequeue();
-// cars.size();
-// cars.isEmpty();
+// cars.enqueue("Jetta")
+// cars.enqueue("Civic")
+// cars.enqueue("Cherokee")
+// // cars.dequeue();
+// // cars.size();
+// // cars.isEmpty();
 
-console.log(cars)
+// console.log(cars)
+// console.log(cars.dequeue())
+// console.log(cars.size())
+
+
+// Prototypes
+
+const cars = QueueProto();
+cars.enqueue('Chevy')
+cars.enqueue('Toyota')
+cars.enqueue('Honda')
+cars.dequeue();
 console.log(cars.dequeue())
-console.log(cars.size())
