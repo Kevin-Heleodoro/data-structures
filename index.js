@@ -1,18 +1,9 @@
 import Queue from "./data_structures/queues/queues_es6.js";
 import Stack from "./data_structures/stacks/stacks_es6.js";
 import StackD from "./data_structures/stacks/stacks_decorator.js";
+import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 
-// ES 6
-// const cars = new Queue();
-
-// cars.enqueue("Jetta")
-// cars.enqueue("Civic")
-// cars.enqueue("Cherokee")
-// cars.dequeue();
-// cars.size();
-// cars.isEmpty();
-
-// // console.log(cars)
+// STACKS
 
 // ES6
 // const plates = new Stack();
@@ -28,12 +19,29 @@ import StackD from "./data_structures/stacks/stacks_decorator.js";
 // console.log(plates)
 
 // Decorator
-// const plates = new StackD;
+const plates = StackD();
 
-// plates.push('A')
-// plates.push('B')
-// plates.push('C')
-// plates.pop()
+plates.push('A')
+plates.push('B')
+plates.push('C')
+plates.pop()
 
-// console.log(plates.size())
-// console.log(plates.pop())
+console.log(plates.size())
+console.log(plates.pop())
+console.log(plates.size())
+console.log(plates)
+
+
+// QUEUES
+
+// ES 6
+// const cars = new Queue();
+
+// cars.enqueue("Jetta")
+// cars.enqueue("Civic")
+// cars.enqueue("Cherokee")
+// cars.dequeue();
+// cars.size();
+// cars.isEmpty();
+
+// // console.log(cars)

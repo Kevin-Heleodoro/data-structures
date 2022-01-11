@@ -1,4 +1,4 @@
-// Decorator pattern
+// Functional Instatiation -> Decorator pattern 
 // push, pop, size
 
 // Using an object
@@ -27,6 +27,7 @@
 //     return newStack;
 // }
 
+// Using arrays
 const Stack = function(){
     let newStack = [];
     let items = 0
