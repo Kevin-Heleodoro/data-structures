@@ -3,9 +3,9 @@
 const Queue = function(){
     const obj = {}
 
-    const queue= {}
-    let front = 0;
-    let items = 0;
+    obj.queue= {}
+    obj.front = 0;
+    obj.items = 0;
 
     Object.assign(obj, Queue.methods)
     return obj;
@@ -13,20 +13,20 @@ const Queue = function(){
 
 Queue.methods = {
     enqueue: function(e){
-        queue[items++] = e
+        this.queue[this.items++] = e
     },
     dequeue: function(){
-        if(obj.size() === 0){return null}
+        if(this.size() === 0){return null}
 
-        let last = queue[front]
-        delete queue[front++]
-        items--
+        let last = this.queue[this.front]
+        delete this.queue[this.front++]
+        this.items--
 
-        if(items === 0){front = 0;}
+        if(this.items === 0){this.front = 0;}
         return last;
     },
     size: function(){
-        return items;
+        return this.items;
     }
 }
 

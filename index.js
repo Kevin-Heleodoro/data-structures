@@ -62,7 +62,7 @@ import sharedStack from "./data_structures/stacks/stacks_funcShared.js";
 // console.log(cars.peek())
 
 // Functional 
-const cars = QueueD()
+const cars = sharedQueue()
 
 cars.enqueue("Jetta")
 cars.enqueue("Civic")
