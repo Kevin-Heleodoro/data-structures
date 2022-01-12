@@ -1,6 +1,6 @@
 // ES6 Instantiation
 class Node {
-    constructor(data) {
+    constructor(data) { // constructor function is the first thing that gets ran when using the 'new' keyword to create an instance
         this.data = data
         this.next = null
     }
@@ -21,6 +21,10 @@ export default class LinkedList {
             current = current.next
         }
         return list;
+    }
+
+    getProps() {
+        return `Length: ${this.length} || Head: ${this.head.data} || Tail: ${this.tail.data}`;
     }
 
     addHead(data) {
@@ -48,12 +52,11 @@ export default class LinkedList {
     }
     
     addToTail(data){
-        const newNode = new Node(data);
-        if(!this.tail) {
-            this.tail = newNode;
-            this.head = newNode;
+        if(!this.head) {
+            this.addHead(data);
         }
         else {
+            const newNode = new Node(data); // the node is only created in this function if there are other nodes already in the list -> code efficiency
             this.tail.next = newNode;
             this.tail = newNode;
         }
@@ -129,10 +132,8 @@ export default class LinkedList {
         else {
             const newNode = new Node(data);
             let current = this.head;
-            let counter = 0;
 
-            while(counter < index - 1){
-                counter++;
+            for(let i = 0; i < index -1; i++){
                 current = current.next;
             }
             let temp = current.next;
@@ -140,5 +141,6 @@ export default class LinkedList {
             newNode.next = temp;
             this.length++
         }
+        return this.print();
     }
 }
