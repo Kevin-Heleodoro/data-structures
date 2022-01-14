@@ -129,83 +129,114 @@
 // Binary search -> O(log n) time complexity -> only works if the data is actually sorted.
 // Based on a true/false conditional
 
-class Node {
-    constructor(data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.left = null;
+//         this.right = null;
+//     }
+// }
 
-class BST {
-    constructor() {
-        this.root = null;
-    }
+// class BST {
+//     constructor() {
+//         this.root = null;
+//     }
 
-    insert(data) {
-        const node = new Node(data);
-        if(!this.root) {this.root = node;}
+//     insert(data) {
+//         const node = new Node(data);
+//         if(!this.root) {this.root = node;}
 
-        else {
-            let current = this.root;
-            while(true) {
-                if(data.id < current.data.id) {
-                    if(!current.left) {
-                        current.left = node;
-                        return this;
-                    } else {
-                        current = current.left;
-                    }
-                } else {
-                    if(!current.right) {
-                        current.right = node;
-                        return this;
-                    } else {
-                        current = current.right;
-                    }
-                }
-            }
-        }
-    }
+//         else {
+//             let current = this.root;
+//             while(true) {
+//                 if(data.id < current.data.id) {
+//                     if(!current.left) {
+//                         current.left = node;
+//                         return this;
+//                     } else {
+//                         current = current.left;
+//                     }
+//                 } else {
+//                     if(!current.right) {
+//                         current.right = node;
+//                         return this;
+//                     } else {
+//                         current = current.right;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    lookup(id) {
-        if(!this.root) {return -1};
+//     lookup(id) {
+//         if(!this.root) {return -1};
 
-        if(this.root.data.id === id) {return this.root.data}
-        else {
-            let current = this.root;
-            while(current) {
-                if(id < current.data.id) {
-                    if(!current.left) { return -1}
-                    else {current = current.left}
-                }
-                else if(id > current.data.id) {
-                    if(!current.right) {return -1}
-                    else{current = current.right}
-                }
-                else{return current.data}
-            }
-        }
-    }
-}
+//         if(this.root.data.id === id) {return this.root.data}
+//         else {
+//             let current = this.root;
+//             while(current) {
+//                 if(id < current.data.id) {
+//                     if(!current.left) { return -1}
+//                     else {current = current.left}
+//                 }
+//                 else if(id > current.data.id) {
+//                     if(!current.right) {return -1}
+//                     else{current = current.right}
+//                 }
+//                 else{return current.data}
+//             }
+//         }
+//     }
+// }
 
-const newTree = new BST();
+// const newTree = new BST();
 
-const data1 = {
-    name: 'Junior',
-    id:1
-}
-const data2 = {
-    name: 'Senior',
-    id:2
-}
-const data3 = {
-    name: 'Original',
-    id:3
-}
+// const data1 = {
+//     name: 'Junior',
+//     id:1
+// }
+// const data2 = {
+//     name: 'Senior',
+//     id:2
+// }
+// const data3 = {
+//     name: 'Original',
+//     id:3
+// }
 
-newTree.insert(data1)
-newTree.insert(data2)
-newTree.insert(data3)
+// newTree.insert(data1)
+// newTree.insert(data2)
+// newTree.insert(data3)
 
-console.log(newTree.lookup(2))
+// console.log(newTree.lookup(2))
+
+
+
+
+
+
+
+
+
+
+// Hashing -> an algo that will be idempotent 
+// idempotent -> a fixed input will always give the same output
+
+// No upper bound
+// function hash(key) {
+//     let hash = 0;
+//     for(let i = 0; i < key.length; i++) {
+//         let char = key.charCodeAt(i)
+//         hash = (hash << 5) - hash + char // 
+//         hash |= 0 // OR 0
+//     }
+//     return hash
+// }
+
+// console.log(hash('test1'))
+
+// console.log(6 << 2) // doubles 6 , 2 times
+
+
+const obj = {}
+
